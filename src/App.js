@@ -11,15 +11,19 @@ import Home from './Pages/home/Home';
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar/>
-      <Switch>
-      <SingIn/>
-      </Switch>
-      <Route path="/home">
-        <Home />
-      </Route>
-    </Router>
+      <Router>
+        <Switch>
+          <Route path="/signIn">
+                <SingIn />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+        </Switch>
+       </Router>
+    </>
   );
 }
 
